@@ -8,17 +8,26 @@
         version="4.0"
         metadata-complete="true">
 
-<!--浏览器访问Java文件，需要通过servlet
-首先通过注册servlet来绑定Java程序和servlet-->
-<servlet>
-    <servlet-name>hello</servlet-name>
-    <servlet-class>com.chengliang.servlet.HelloServlet</servlet-class>
-</servlet>
+    <!--浏览器访问Java文件，需要通过servlet
+    首先通过注册servlet来绑定Java程序和servlet-->
+    <servlet>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>com.chengliang.servlet.HelloServlet</servlet-class>
+    </servlet>
 
-<!--设置一个浏览器能够访问servlet的路径，所以需要设置映射-->
-<servlet-mapping>
-    <servlet-name>hello</servlet-name>
-    <url-pattern>/hello</url-pattern>
-</servlet-mapping>
+    <!--设置一个浏览器能够访问servlet的路径，所以需要设置映射-->
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Request</servlet-name>
+        <servlet-class>com.chengliang.servlet.RequestTest </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Request</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
 
 </web-app>
